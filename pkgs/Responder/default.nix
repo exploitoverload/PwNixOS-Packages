@@ -45,7 +45,6 @@ python3.pkgs.buildPythonApplication rec {
     homepage = "https://github.com/lgandx/Responder";
     mainProgram = "Responder";
     license = licenses.gpl3Only;
-    maintainers = with maintainers; [ exploitoverload ];
     platforms = platforms.unix;
   };
 }
