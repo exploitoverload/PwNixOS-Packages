@@ -7,4 +7,5 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   Responder = pkgs.callPackage ./pkgs/Responder { };
+  impacket = pkgs.callPackage ./pkgs/impacket { };
 }
