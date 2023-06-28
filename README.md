@@ -13,4 +13,5 @@ Uncomment this if you use travis:
 
 ## List of Packages:
 
-* Responder (database file and logs in /tmp) -> Functional but WiP
+* Responder (v3.1.3.0) (database file and logs in /tmp) -> Functional but WiP
+* impacket (impacket_0_10_0)
