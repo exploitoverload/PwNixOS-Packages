@@ -5,13 +5,13 @@ on:
     branches:
       - main
       - master
-  env:
-    NIXPKGS_ALLOW_UNFREE: 1
   schedule:
     # rebuild everyday at 2:51
     # TIP: Choose a random time here so not all repositories are build at once:
     # https://www.random.org/clock-times/?num=1&earliest=01%3A00&latest=08%3A00&interval=5&format=html&rnd=new
     - cron:  '51 2 * * *'
+env:
+  NIXPKGS_ALLOW_UNFREE: "1"
 jobs:
   tests:
     strategy:
