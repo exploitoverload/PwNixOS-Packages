@@ -8,4 +8,5 @@
 
   Responder = pkgs.callPackage ./pkgs/Responder { };
   impacket = pkgs.callPackage ./pkgs/impacket { };
+  BloodHound = pkgs.callPackage ./pkgs/BloodHound { };
 }

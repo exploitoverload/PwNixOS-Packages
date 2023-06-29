@@ -15,3 +15,4 @@ Uncomment this if you use travis:
 
 * Responder (v3.1.3.0) (database file and logs in /tmp) -> Functional but WiP
 * impacket (impacket_0_10_0)
+* BloodHound (v4.3.1) (running with steam-run, running natively not working...)
