@@ -19,15 +19,14 @@ stdenvNoCC.mkDerivation rec {
   installPhase = ''
     runHook preInstall
 
-    mkdir -p $out/bin $out/share/${pname} $out/share/applications
+    mkdir -p $out/bin $out/share/${pname} $out/share/applications $out/share/icons/hicolor/128x128/apps
 
     cp -r . $out/share/${pname}
-    
-    for icon in $out/share/${pname}/resources/app/src/img/*.png; do 
-      mkdir -p "$out/share/icons/hicolor/$(basename $icon .png)/BloodHound"
-      ln -s "$icon" "$out/share/icons/hicolor/$(basename $icon .png)/BloodHound/icon.png"
-    done
 
+    cp $out/share/${pname}/resources/app/src/img/logo-white-transparent-full.png $out/share/icons/hicolor/128x128/apps
+
+    mv $out/share/icons/hicolor/128x128/apps/logo-white-transparent-full.png $out/share/icons/hicolor/128x128/apps/BloodHound.png
+    
     ln -s "${desktopItem}/share/applications" "$out/share/applications"
 
     makeWrapper ${steam-run}/bin/steam-run $out/bin/${pname} \
@@ -39,7 +38,7 @@ stdenvNoCC.mkDerivation rec {
   desktopItem = makeDesktopItem {
     name = "BloodHound";
     exec = "${pname}";
-    icon = "logo-white-transparent-full";
+    icon = "BloodHound";
     desktopName = "BloodHound";
     genericName = "BloodHound";
     comment = meta.description;
