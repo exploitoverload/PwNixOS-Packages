@@ -18,3 +18,4 @@ Uncomment this if you use travis:
 * BloodHound (v4.3.1) (running with steam-run, running natively not working...)
 * bloodhound-python (v1.0.1)
 * seclists (2023.2)
+* psudohash (commit 2d586dec8b5836546ae54b924eb59952a7ee393c)
