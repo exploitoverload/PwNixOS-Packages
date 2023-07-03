@@ -12,4 +12,5 @@
   bloodhound-python = pkgs.callPackage ./pkgs/bloodhound-python { };
   seclists = pkgs.callPackage ./pkgs/seclists { };
   psudohash = pkgs.callPackage ./pkgs/psudohash { };
+  ADCSKiller = pkgs.callPackage ./pkgs/ADCSKiller { };
 }

@@ -19,3 +19,4 @@ Uncomment this if you use travis:
 * bloodhound-python (v1.0.1)
 * seclists (2023.2)
 * psudohash (commit 2d586dec8b5836546ae54b924eb59952a7ee393c)
+* ADCSKiller (commit d74bfea91f24a09df74262998d60f213609b45c6)
