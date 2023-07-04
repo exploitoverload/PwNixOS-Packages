@@ -1,15 +1,8 @@
 # PwNixOS-Packages: Hacking tools for PwNixOS
 
-<!-- Remove this if you don't use github actions -->
 ![Build and populate cache](https://github.com/exploitoverload/PwNixOS-Packages/workflows/Build%20and%20populate%20cache/badge.svg)
 
-<!--
-Uncomment this if you use travis:
-
-[![Build Status](https://travis-ci.com/<YOUR_TRAVIS_USERNAME>/nur-packages.svg?branch=master)](https://travis-ci.com/<YOUR_TRAVIS_USERNAME>/nur-packages)
--->
 [![Cachix Cache](https://img.shields.io/badge/cachix-pwnixos-blue.svg)](https://pwnixos.cachix.org)
-
 
 ## List of Packages:
 
@@ -20,3 +13,30 @@ Uncomment this if you use travis:
 * seclists (2023.2)
 * psudohash (commit 2d586dec8b5836546ae54b924eb59952a7ee393c)
 * ADCSKiller (commit d74bfea91f24a09df74262998d60f213609b45c6)
+* polenum (1.6.1)
+
+## How to install packages - (for testing purposes)
+
+Two Options:
+
+1. Build
+
+```zsh
+nix-build -A <package>
+```
+A folder named result is created, which contains the result of the package derivation. The structure is similar to the linux file tree, the `./bin` folder contains the executables and the `./share/<package>` folder contains the source code of the package. To run the package, simply run the binaries found in the `./bin` folder.
+
+2. Install 
+
+```zsh
+nix-env -if default.nix
+```
+In this other way, all the packages in this repo are installed in the user's profile, so they will be available as any other package in the system. 
+
+To list the packages installed in the profile, or to remove a package, you can use the following commands:
+
+```zsh
+nix-env -q # List installed packages
+
+nix-env -e <package> # Uninstall a package
+```
